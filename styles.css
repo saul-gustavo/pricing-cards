@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --very-light-grayish-blue: hsl(240, 78%, 98%);
+    --light-grayish-blue: hsl(234, 14%, 74%);
+    --grayish-blue: hsl(233, 13%, 49%);
+    --dark-grayish-blue: hsl(232, 13%, 33%);
+    --white: #ffff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 0.93rem; /* 15px */
+}
+
+body {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--very-light-grayish-blue);
+    background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+    background-position: top -180px right 0, bottom -70px left 0;
+    background-size: 28%, 28%;
+    background-repeat: no-repeat, no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.main-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.top-title {
+    text-align: center;
+}
+
+.top-toggle {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0rem;
+    gap: 2rem;
+}
+
+.top-year, 
+.top-month {
+    margin-top: 0.5rem;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 50px;
+    height: 60px;
+}
+
+.toggle-input {
+    display: none;
+}
+
+.toggle-label {
+    position: absolute;
+    cursor: pointer;
+    background-image: linear-gradient(hsl(236, 72%, 79%) ,hsl(237, 63%, 64%));
+    border-radius: 25px;
+    width: 100%;
+    height: 50%;
+    display: block;
+}
+
+.toggle-label::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--white);
+    top: 4.5px;
+    left: 2.5px;
+    transition: transform 0.4s;
+}
+
+.toggle-input:checked + .toggle-label::before {
+    transform: translateX(25px);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.card {
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: 1px 1px 20px var(--light-grayish-blue);
+}
+
+.card-basic, .card-master {
+    background-color: var(--white);
+}
+
+.card-profe {
+    background-image: linear-gradient(hsl(236, 72%, 79%) ,hsl(237, 63%, 64%));
+    height: 550px;
+    padding: 3.5rem 2rem;
+    color: #fff;
+}
+
+.card-value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dollar {
+    font-size: 1.8rem;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.value {
+    font-size: 4rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+}
+
+.card .card-details p {
+    margin: 0.1rem 0rem;
+    padding: 1rem;
+}
+
+.card-basic .card-details p:nth-child(1),
+.card-master .card-details p:nth-child(1) {
+    border-top: 1px solid var(--light-grayish-blue);
+}
+
+.card-basic .card-details p:nth-child(2),
+.card-master .card-details p:nth-child(2) {
+    border-top: 1px solid var(--light-grayish-blue);
+    border-bottom: 1px solid var(--light-grayish-blue);
+}
+
+.card-basic .card-details p:nth-child(3), 
+.card-master .card-details p:nth-child(3) {
+    border-bottom: 1px solid var(--light-grayish-blue);
+}
+
+.card-profe .card-details {
+    border-top: 1px solid var(--very-light-grayish-blue);
+    border-bottom: 1px solid var(--very-light-grayish-blue);
+}
+
+.card-profe .card-details p:nth-child(2) {
+    border-top: 1px solid var(--very-light-grayish-blue);
+    border-bottom: 1px solid var(--very-light-grayish-blue);
+}
+
+.title-card {
+    font-size: 1.2rem;
+}
+
+.learn-more {
+    padding: 0.69rem 0rem;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.card-basic .learn-more, 
+.card-master .learn-more {
+    background-image: linear-gradient(hsl(236, 72%, 79%) ,hsl(237, 63%, 64%));
+    color: #fff;
+}
+
+.card-profe .learn-more {
+    background-color: white;
+    color: black;
+}
+
+@media (max-width: 992px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    body {
+        background-image: url(./images/bg-top.svg);
+        background-position: top -10px right -120px;
+        background-size: 58%;
+        background-repeat: no-repeat;
+    }
+
+    .main-top {
+        margin-top: 4rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        gap: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .card {
+        width: 450px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .cards {
+        max-width: 400px;
+    }
+
+    .card {
+        width: 350px;
+        padding: 1.8rem;
+    }
+}
+
+
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- styles CSS -->
+  <link rel="stylesheet" href="./styles.css">
+  <title>Frontend Mentor | Pricing Cards</title>
+</head>
+
+<body>
+
+  <main class="main">
+
+    <div class="main-top">
+      <h1 class="top-title">Our Pricing</h1>
+      <div class="top-toggle">
+        <span class="top-year">Annually</span>
+        <div class="toggle-switch">
+          <input type="checkbox" id="switch" class="toggle-input">
+          <label for="switch" class="toggle-label"></label>
+        </div>
+        <span class="top-month">Monthly</span>
+      </div>
+    </div>
+
+    <section class="cards">
+
+      <div class="card card-basic">
+        <h2 class="title-card">Basic</h2>
+        <div class="card-value">
+
+          <p class="value year"><span class="dollar">&dollar;</span>199.99</p>
+        </div>
+        <div class="card-details">
+          <p>500 GB Storage</p>
+          <p>2 Users Allowed</p>
+          <p>Send up to 3 GB</p>
+        </div>
+        <button class="learn-more">Learn More</button>
+      </div>
+
+      <div class="card card-profe">
+        <h2 class="title-card">Professional</h2>
+        <div class="card-value">
+
+          <p class="value year"><span class="dollar">&dollar;</span>249.99</p>
+        </div>
+        <div class="card-details">
+          <p>1 TB Storage</p>
+          <p>5 Users Allowed</p>
+          <p>Send up to 10 GB</p>
+        </div>
+        <button class="learn-more">Learn More</button>
+      </div>
+
+      <div class="card card-master">
+        <h2 class="title-card">Master</h2>
+
+        <div class="card-value">
+
+          <p class="value year"><span class="dollar">&dollar;</span>399.99</p>
+        </div>
+        <div class="card-details">
+          <p>2 TB Storage</p>
+          <p>10 Users Allowed</p>
+          <p>Send up to 20 GB</p>
+        </div>
+        <button class="learn-more">Learn More</button>
+      </div>
+
+    </section>
+  </main>
+
+
+  <script src="./app.js"></script>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+
+</html>
